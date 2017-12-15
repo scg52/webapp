@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+
+<head>
+
+	<title>Situp Timer</title>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css-normalize.css">
+    <link rel="stylesheet" type="text/css" href="css-add2home.css">
+	<link rel="stylesheet" href="css-main.css">
+</head>
+
+<body>
+	<!-- PAGE CONTENT -->
+	<div id="content">
+		<div id="portrait-help">
+		  <div class="help-content">
+            <button type="button" name="home_btn" id="home_btn" onclick="jmp2LocalPage('index.html')">Home</button>
+		  
+		    <img id="hlp-pic-stat" src="img/homestats.png">
+		    <h2 id="hlp-title-stat">Statistics</h2>
+		    <p id="hlp-desc-stat">Here is where you can find your progress while using the app. The first stat labelled is your average situps per minute based on all previous attempts. The next stats are your situps per minute for the past three attempts.</p>
+
+		    <img id="hlp-pic-hmbtn" src="img/homebuttons.png">
+		    <h2 id="hlp-title-hmbtn">Home Screen Buttons</h2>
+		    <p id="hlp-desc-hmbtn">Here is the amount of time you want to track your situps. You can add or remove 30s by pressing the buttons. Once you are satisfied with the time then press start.</p>
+
+		    <img id="hlp-pic-subtn" src="img/situpbuttons.png">
+		    <h2 id="hlp-title-subtn">Timer Buttons</h2>
+		    <p id="hlp-desc-subtn">Here you can see your current progress in total situps so far. You can also press cancel to stop the timer and return to the home screen.</p>
+		  </div> <!-- help -->  
+		</div>
+		<div id="landscape">
+          <h1>ROTATE your device to PORTRAIT view.</h1>
+        </div>
+	</div>
+	<!-- JAVASCRIPT-->
+  <script type="text/javascript" src="js-refresh-manifest.js"></script>
+  <script src="js-main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+CACHE MANIFEST
+# version - 9
+
+CACHE:
+
+# CSS
+css-add2home.css
+css-main.css
+css-normalize.css
+
+# IMAGES
+img/mstile-150x150.png
+img/sitman.svg
+img/sitmanUp.svg
+img/sitmanDown.svg
+img/situp.png
+img/situpbuttons.png
+img/homebuttons.png
+img/homestats.png
+img/safari-pinned-tab.svg
+img/apple-touch-icon.png
+img/apple-touch-icon-57x57.png
+img/apple-touch-icon-60x60.png
+img/apple-touch-icon-72x72.png
+img/apple-touch-icon-76x76.png
+img/apple-touch-icon-114x114.png
+img/apple-touch-icon-144x144.png
+img/apple-touch-icon-120x120.png
+img/apple-touch-icon-152x152.png
+img/apple-touch-icon-180x180.png
+img/android-chrome-192x192.png
+img/android-chrome-256x256.png
+img/browserconfig.xml
+img/manifest.json
+
+# HTML FILES
+index.html
+help.html
+timer.html
+
+# JAVASCRIPT - SPECIFIC ORDER
+js-refresh-manifest.js
+js-add2home.js
+js-main.js
+
+## Any resources not listed above will require the user to be online.
+NETWORK:

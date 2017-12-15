@@ -1,0 +1,226 @@
+body {
+    height: 100%;
+}
+
+#content{
+    width: 320px;
+    margin: 0px auto;
+}
+
+#portrait{
+    display: grid;
+    grid-template-rows: .125fr .125fr 1fr 1fr .5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"help . ."
+                        "title title title"
+                        "sitgrid sitgrid sitgrid"
+                        "timer timer timer"
+                        ". startb .";
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#help{
+    grid-area: help;
+}
+
+#help_btn{
+    width: 25px;
+    height: 25px;
+    border-radius: 12px;
+    padding-bottom: 2px;
+    margin-top: 10px;
+}
+
+#title{
+    grid-area: title;
+    text-align: center;
+}
+
+#sitgrid{
+    grid-area: sitgrid;
+    width: 100%;
+    height: 30vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+#timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-row-gap: 2rem;
+    grid-area: timer;
+    font-size: 1.5rem;
+}
+
+#minus_btn{
+    grid-area: minus;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 2px;
+}
+
+#time{
+    grid-area: time;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#plus_btn{
+    grid-area: plus;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 2px;
+}
+
+#start_btn{
+    grid-area: startb;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    align-self: center;
+    font-size: 2rem;
+    margin-top: -70px;
+    text-align: center;
+}
+
+/*-------------------------------------------------------Timer Page-------------------------------------------------------*/
+
+#timespot{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+#timeDisplay{
+    height: 50vh;
+}
+
+#bottomhalf{
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#cancel_btn{
+    grid-area: cancel;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    align-self: center;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+#sitCount{
+    font-size: 5.5rem;
+}
+
+/*------------------------------------------------------Help Screen------------------------------------------------------*/
+
+#portrait-help{
+    height: 170vh;
+}
+
+.help-content{
+    display: grid;
+    grid-template-rows: .125fr .125fr 1fr .125fr 1fr .125fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"home_btn ."
+                        "hlp-pic-stat hlp-title-stat"
+                        "hlp-desc-stat hlp-desc-stat"
+                        "hlp-pic-hmbtn hlp-title-hmbtn"
+                        "hlp-desc-hmbtn hlp-desc-hmbtn"
+                        "hlp-pic-subtn hlp-title-subtn"
+                        "hlp-desc-subtn hlp-desc-subtn";
+    justify-content: center;
+    align-content: center;
+    width: 320px;
+}
+
+.help-content img{
+    width: 150px;
+    border-radius: 10px;
+    border: 3px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+}
+
+#home_btn{
+    width: 53px;
+    height: 53px;
+    border-radius: 25px;
+    padding-bottom: 2px;
+    margin: 20px 0;
+    grid-area: home_btn;
+}
+
+#hlp-pic-stat{ grid-area: hlp-pic-stat; }
+#hlp-pic-hmbtn{ grid-area: hlp-pic-hmbtn; }
+#hlp-pic-subtn{ grid-area: hlp-pic-subtn; }
+
+#hlp-title-stat{ grid-area: hlp-title-stat; }
+#hlp-title-hmbtn{ grid-area: hlp-title-hmbtn; }
+#hlp-title-subtn{ grid-area: hlp-title-subtn; }
+
+#hlp-desc-stat{ grid-area: hlp-desc-stat; }
+#hlp-desc-hmbtn{ grid-area: hlp-desc-hmbtn; }
+#hlp-desc-subtn{ grid-area: hlp-desc-subtn; }
+
+/*---------------------------------------------------------General---------------------------------------------------------*/
+
+button{
+    background-color: orange;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    border: none;
+    text-align: center; 
+}
+
+/*----------------------------svg----------------------------*/
+
+svg circle{
+    stroke: black;
+    stroke-width: 3px;
+    fill: none;
+}
+
+#head circle{
+    fill: black;
+}
+
+/*-------------------------------------------------Media Query-------------------------------------------------------------*/
+
+@media only screen and (orientation:landscape){
+    body {
+	    background-color:#db2518;
+    }
+    #portrait{
+        display: none;
+    }
+}
+
+@media only screen and (orientation:portrait){
+    body {
+	    background: rgb(178,225,255);
+        background: -moz-linear-gradient(top, rgba(178,225,255,1) 0%, rgba(102,182,252,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%);
+        background: linear-gradient(to bottom, rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=0 );
+    }
+    #landscape{
+        display: none;
+    }
+}

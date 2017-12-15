@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+
+<head>
+
+	<title>Situp Timer</title>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- make the app title different from the web page title -->
+	<meta name="apple-mobile-web-app-title" content="SitRep">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="img/manifest.json">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css-normalize.css">
+    <link rel="stylesheet" type="text/css" href="css-add2home.css">
+	<link rel="stylesheet" href="css-main.css">
+</head>
+
+<body>
+	<!-- PAGE CONTENT -->
+	<div id="content">
+		<div id="portrait">
+		  <div id="help">
+		    <button type="button" name="help_btn" id="help_btn" onclick="jmp2LocalPage('help.html')">?</button>
+		  </div>
+		  <h1 id="title">SitRep Situp Tracker</h1>
+		  <div id="sitgrid">
+		  	<div id="section">
+		  	  <p>Average SPM</p>
+		  	  <p>Previous SPM</p>
+		  	</div>
+		  	<div id="results">
+		  	  <p id="av"></p>
+		  	  <p id="p1"></p>
+		  	  <p id="p2"></p>
+		  	  <p id="p3"></p>
+		  	</div>
+		  </div>
+		  <div id="timer">
+		  	<button type="button" name="minus_btn" id="minus_btn" onclick="minusFun()">-30</button> <!-- subtract 30 sec -->
+		  	<p id="time"></p>
+		  	<button type="button" name="plus_btn" id="plus_btn" onclick="plusFun()">+30</button> <!-- add 30 sec -->
+		  </div>
+		  <button type="button" name="start_btn" id="start_btn" onclick="jmp2LocalPage('timer.html');">Start</button> 
+		  <!-- ^start the timer^ -->
+		</div>
+		<div id="landscape">
+          <h1>ROTATE your device to PORTRAIT view.</h1>
+        </div>
+	</div>
+	<!-- JAVASCRIPT-->
+  <script type="text/javascript">
+    //Customize config variable BEFORE loading add2home.js file
+    var addToHomeConfig = {
+      touchIcon: true
+    }
+  </script>
+  <script type="text/javascript" src="js-refresh-manifest.js"></script>
+  <script src="js-add2home.js"></script>
+  <script src="js-main.js"></script>
+</body>
+
+</html>
